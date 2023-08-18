@@ -1,0 +1,65 @@
+﻿@model LoginRequestDto
+
+    <div class="container p-5">
+        <form method="post">
+           
+            <!-- Email input -->
+
+            <div class="row">
+                <div class="col-12 col-md-6 offset-3 text-danger" asp-validation-summary="All"></div>
+                <div class="col-12 col-md-6 offset-3 pb-2 form-outline mb-4">
+                    <label class="form-label" for="form2Example1">Email address</label>
+                    <input asp-for="UserName" placeholder="Email" type="email" id="form2Example1" class="form-control" />
+
+                </div>
+
+                <!-- Password input -->
+                <div class="col-12 col-md-6 offset-3 pb-2 form-outline mb-4">
+                    <label class="form-label" for="form2Example2">Password</label>
+                    <input asp-for="Password" placeholder="Password" type="password" id="form2Example2" class="form-control" />
+
+                </div>
+
+                <!-- 2 column grid layout for inline styling -->
+                <div class="col-12 col-md-6 offset-3 pb-2  row mb-4">
+                    <div class="col d-flex justify-content-center">
+                        <!-- Checkbox -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                            <label class="form-check-label" for="form2Example31"> Remember me </label>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <!-- Simple link -->
+                        <a href="#!">Forgot password?</a>
+                    </div>
+                </div>
+
+                <!-- Submit button -->
+                <div class="col-12 col-md-6 offset-3 pb-2">
+                    <button type="submit" value="submit" asp-controller="Auth" asp-action="Login" class="btn btn-primary btn-block mb-4">Sign in</button>
+                </div>
+                <!-- Register buttons -->
+                <div class="col-12 col-md-6 offset-3 pb-2  text-center">
+                    <p>Not a member? <a asp-controller="Auth" asp-action="Register">Register</a></p>
+                    <p>or sign up with:</p>
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-google"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+
+                    <button type="button" class="btn btn-link btn-floating mx-1">
+                        <i class="fab fa-github"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>

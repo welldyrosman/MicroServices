@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <None Remove="Utility\" />
+    <None Remove="Service\" />
+    <None Remove="Service\IService\" />
+    <None Remove="Views\Coupon\" />
+    <None Remove="Views\Auth\" />
+    <None Remove="Views\Product\" />
+    <None Remove="Views\Cart\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utility\" />
+    <Folder Include="Service\" />
+    <Folder Include="Service\IService\" />
+    <Folder Include="Views\Coupon\" />
+    <Folder Include="Views\Auth\" />
+    <Folder Include="Views\Product\" />
+    <Folder Include="Views\Cart\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.32.1" />
+    <PackageReference Include="IdentityModel" Version="6.1.0" />
+  </ItemGroup>
+</Project>

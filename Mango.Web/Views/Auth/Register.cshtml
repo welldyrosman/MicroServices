@@ -1,0 +1,68 @@
+﻿@model RegistrationRequestDto
+
+<div class="container px-4 py-2">
+    <form method="post">
+        <!-- Email input -->
+        <div class="row">
+            
+            <div class="col-12 col-md-6 offset-3 pb-2 form-outline mb-2">
+                <label class="form-label">Email address</label>
+                <input asp-for="Email" placeholder="Email" type="email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="col-12 col-md-6 offset-3 pb-2 form-outline mb-2">
+                <label class="form-label">Full Name</label>
+                <input asp-for="Name" placeholder="Email" type="text" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="col-12 col-md-6 offset-3 pb-2 form-outline mb-2">
+                <label class="form-label">Phone Number</label>
+                <input asp-for="PhoneNumber" placeholder="Email" type="text" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+
+            <div class="col-12 col-md-6 offset-3 pb-2 form-outline mb-2">
+                <label class="form-label">Role</label>
+                <select asp-for="Role" class="form-control" asp-items="@ViewBag.RoleList">
+                    <option disabled selected>--Select Role--</option>
+                </select>
+                <span asp-validation-for="Role" class="text-danger"></span>
+            </div>
+
+            <!-- Password input -->
+            <div class="col-12 col-md-6 offset-3 pb-2 form-outline mb-2">
+                <label class="form-label">Password</label>
+                <input asp-for="Password" placeholder="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+
+            <!-- Submit button -->
+            <div class="col-12 col-md-6 offset-3 pb-2">
+                <button type="submit" class="btn btn-primary btn-block mb-2" value="Submit">Register</button>
+            </div>
+            <!-- Register buttons -->
+            <div class="col-12 col-md-6 offset-3 pb-2  text-center">
+                <p>Have an Account? <a asp-controller="Auth" asp-action="Login">Login</a></p>
+                <p>or sign up with:</p>
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-google"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-twitter"></i>
+                </button>
+
+                <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-github"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
