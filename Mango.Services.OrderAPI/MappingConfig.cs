@@ -3,7 +3,7 @@ using AutoMapper;
 using Mango.Services.OrderAPI.Models;
 using Mango.Services.OrderAPI.Models.Dto;
 
-namespace Mango.Services.ProductAPI
+namespace Mango.Services.OrderAPI
 {
 	public class MappingConfig
 	{
